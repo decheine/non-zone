@@ -17,7 +17,8 @@
         "aw:build:prod": "yarn set-io-arweave && REACT_APP_NONZONE_ENV='production' GENERATE_SOURCEMAP=false yarn build-for-web && yarn reset-io",
         "aw:deploy": "arweave deploy-dir ./webapp/build",
         "build-for-web": "yarn --cwd nonzone-lib build && yarn --cwd webapp build",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "postinstall": "cd app && expo-yarn-workspaces postinstall"
     },
     "repository": {
         "type": "git",
